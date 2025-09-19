@@ -2,9 +2,9 @@
 
 // EmailJS Configuration
 const EMAILJS_CONFIG = {
-    publicKey: 'N0Zw19M_fhv4Lmbkp',
-    serviceId: 'service_8eb5du5',
-    templateId: 'template_fcvyyha'
+    publicKey: 'OFOTXoy5yqildsxlF',
+    serviceId: 'service_muy2lvg',
+    templateId: 'template_4trkkvr'
 };
 
 // Theme Configuration
