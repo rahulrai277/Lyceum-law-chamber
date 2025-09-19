@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lyceum Law Chambers - Delhi Based Legal Practice</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+    
+    <!-- Theme Switcher -->
+    <div class="theme-switcher">
+        <button class="theme-toggle-btn" onclick="toggleThemePanel()">
+            <i class="fas fa-palette"></i>
+        </button>
+        <div class="theme-panel" id="themePanel">
+            <h6>Choose Theme</h6>
+            <div class="theme-options">
+                <button class="theme-btn" data-theme="classic-dark">Classic Dark</button>
+                <button class="theme-btn" data-theme="corporate-blue">Corporate Blue</button>
+                <button class="theme-btn" data-theme="elegant-gold">Elegant Gold</button>
+                <button class="theme-btn" data-theme="modern-grey">Modern Grey</button>
+                <button class="theme-btn" data-theme="legal-green">Legal Green</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#home">
+                <i class="fas fa-balance-scale me-2"></i>
+                Lyceum Law Chambers
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about-founder">About Founder</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about-firm">About Firm</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#service-request">Service Request</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item">
+                        <button class="btn btn-outline-light btn-sm ms-2" onclick="openAdminModal()">
+                            <i class="fas fa-user-shield me-1"></i>Admin
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="hero-content">
+                        <h1 class="display-4 fw-bold mb-3 animate-fade-in">Lyceum Law Chambers</h1>
+                        <p class="lead mb-4 animate-slide-up">Delhi-based legal practice delivering outcome-driven solutions with hybrid consultation model</p>
+                        <div class="hero-stats mb-4">
+                            <div class="stat-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Delhi Based</span>
+                            </div>
+                            <div class="stat-item">
+                                <i class="fas fa-laptop-house"></i>
+                                <span>Hybrid Model</span>
+                            </div>
+                            <div class="stat-item">
+                                <i class="fas fa-handshake"></i>
+                                <span>Outcome Driven</span>
+                            </div>
+                        </div>
+                        <a href="#service-request" class="btn btn-primary btn-lg animate-bounce">
+                            <i class="fas fa-paper-plane me-2"></i>Request Legal Service
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-image animate-float">
+                        <img src="profile.jpg" alt="Adv. Yash Kumar - Founder" class="img-fluid rounded-circle profile-img">
+                        <div class="image-overlay">
+                            <h5>Adv. Yash Kumar</h5>
+                            <p>Founder & Legal Practitioner</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Founder Section -->
+    <section id="about-founder" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="founder-image-card">
+                        <img src="profile.jpg" alt="Adv. Yash Kumar" class="img-fluid rounded">
+                        <div class="founder-info">
+                            <h4>Adv. Yash Kumar</h4>
+                            <p class="text-muted">Founder & Managing Partner</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <h2 class="section-title mb-4">About the Founder</h2>
+                    <div class="founder-content">
+                        <p class="lead">I am the founder of Lyceum Law Chambers, a Delhi-based legal practice where I combine rigorous legal analysis with hands-on financial expertise to deliver advice that is not only technically sound but also commercially sensible.</p>
+                        
+                        <p>My work spans <strong>Accounting & Taxation</strong> (direct/indirect tax advisory, compliance, assessments, structuring), <strong>Alternative Dispute Resolution (ADR)</strong> (arbitration and mediation to resolve disputes faster and at lower cost), <strong>Corporate & Business Law</strong> (contract drafting/review, policies, regulatory compliance), and <strong>Civil & Matrimonial</strong> matters (property, family, and allied disputes).</p>
+                        
+                        <p>What sets my practice apart is an <em>outcome-driven approach</em> - I start with your objective and work backwards laying out options, risks, timelines, and costs in clear terms. I value ethics, preparation, and service, and I prefer amicable, enforceable resolutions wherever possible. Where litigation becomes necessary, I proceed strategically and efficiently.</p>
+                        
+                        <p>I also work in a hybrid model offering both online consultations and in-person conferences support is accessible and timely. If you're looking for straightforward guidance, carefully drafted documentation, or a decisive resolution pathway, Lyceum Law Chambers is built to help.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Education & Qualifications</h2>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="education-content">
+                        <div class="education-main mb-4">
+                            <h4><i class="fas fa-graduation-cap me-2"></i>Bachelor of Law (B.A. LL.B. Hons.)</h4>
+                            <p class="text-muted mb-3">CCS University</p>
+                            <p>I am a law graduate holding a Bachelor of Law (B.A. LL.B. Hons.) degree from CCS University, with a strong foundation in legal principles and practical application. Throughout my academic journey, I consistently demonstrated exceptional analytical skills, a keen understanding of law, and the ability to apply them in real-world scenarios.</p>
+                            
+                            <p>My active participation in legal clinics and extracurricular engagements has equipped me with practical experience in legal research, drafting, and advocacy. I have also worked with reputed legal organizations, where I gained exposure to complex matters and developed a deeper commitment to the profession.</p>
+                            
+                            <p>Now entering practice as a lawyer, I am eager to contribute effectively to the legal profession, while continuing to learn from seasoned professionals and advancing justice.</p>
+                        </div>
+                        
+                        <div class="competence-areas">
+                            <h5 class="mb-3">Areas of Competence</h5>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <ul class="competence-list">
+                                        <li><i class="fas fa-check-circle me-2"></i>Human Rights Law</li>
+                                        <li><i class="fas fa-check-circle me-2"></i>Taxation Law</li>
+                                        <li><i class="fas fa-check-circle me-2"></i>Property Rights & Real Estate Law</li>
+                                        <li><i class="fas fa-check-circle me-2"></i>Matrimonial Suits & Divorce Matters</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <ul class="competence-list">
+                                        <li><i class="fas fa-check-circle me-2"></i>Business & Corporate Legal Issues</li>
+                                        <li><i class="fas fa-check-circle me-2"></i>Contract Drafting & Negotiation</li>
+                                        <li><i class="fas fa-check-circle me-2"></i>Intellectual Property Rights (IPR)</li>
+                                        <li><i class="fas fa-check-circle me-2"></i>Arbitration & Alternative Dispute Resolution (ADR)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Firm Section -->
+    <section id="about-firm" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="section-title mb-4">About Lyceum Law Chambers</h2>
+                    <p class="lead mb-4">A modern legal practice committed to delivering exceptional legal services through innovative approaches and client-focused solutions.</p>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-lg-4 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-laptop-house"></i>
+                        </div>
+                        <h4>Hybrid Consultation Model</h4>
+                        <p>We offer both online consultations and in-person meetings to ensure accessibility and convenience for all our clients.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-target"></i>
+                        </div>
+                        <h4>Outcome-Driven Approach</h4>
+                        <p>We start with your objectives and work backwards, providing clear options, risks, timelines, and costs.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h4>Ethics & Service</h4>
+                        <p>We value ethics, thorough preparation, and exceptional service, preferring amicable resolutions wherever possible.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Our Legal Services</h2>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-balance-scale"></i>
+                        </div>
+                        <div class="service-content">
+                            <h4>ADR (Arbitration & Mediation)</h4>
+                            <p>Strategic dispute resolution at lower cost through arbitration and mediation processes, ensuring faster resolution of conflicts.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <div class="service-content">
+                            <h4>Tax & Compliance</h4>
+                            <p>Direct/indirect tax advisory and compliance solutions, including assessments, structuring, and regulatory compliance.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-file-signature"></i>
+                        </div>
+                        <div class="service-content">
+                            <h4>Corporate & Contracts</h4>
+                            <p>Comprehensive contract drafting, review, and regulatory compliance services for businesses of all sizes.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-house-user"></i>
+                        </div>
+                        <div class="service-content">
+                            <h4>Civil & Matrimonial</h4>
+                            <p>Property, family, and allied disputes handled with discretion and expertise, ensuring favorable outcomes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Request Section -->
+    <section id="service-request" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="section-title text-center mb-4">Request Legal Service</h2>
+                    <p class="text-center text-muted mb-5">Submit your legal inquiry and we'll get back to you promptly with initial guidance.</p>
+                    
+                    <form id="serviceRequestForm" class="service-form">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="fullName" class="form-label">Full Name *</label>
+                                <input type="text" class="form-control" id="fullName" name="fullName" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="email" class="form-label">Email Address *</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="phone" class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control" id="phone" name="phone">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="matterType" class="form-label">Type of Matter *</label>
+                                <select class="form-control" id="matterType" name="matterType" required>
+                                    <option value="">Select Matter Type</option>
+                                    <option value="taxation">Taxation & Compliance</option>
+                                    <option value="adr">Alternative Dispute Resolution</option>
+                                    <option value="corporate">Corporate & Business Law</option>
+                                    <option value="civil">Civil & Property</option>
+                                    <option value="matrimonial">Matrimonial & Family</option>
+                                    <option value="ipr">Intellectual Property</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <label for="problemDescription" class="form-label">Problem Description *</label>
+                            <textarea class="form-control" id="problemDescription" name="problemDescription" rows="5" placeholder="Please describe your legal matter in detail..." required></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary btn-lg">
+                                <i class="fas fa-paper-plane me-2"></i>Submit Request
+                            </button>
+                        </div>
+                    </form>
+                    
+                    <div id="formMessage" class="alert mt-3" style="display: none;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Frequently Asked Questions</h2>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    What is your consultation fee structure?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    We offer both online and in-person consultations. Our fee structure is transparent and varies based on the complexity of the matter. Initial consultations include a clear breakdown of expected costs and timelines.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    Do you handle matters outside Delhi?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes, through our hybrid model we can provide legal services across India. Online consultations enable us to serve clients nationwide, with coordination for court appearances as needed.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    What is your approach to dispute resolution?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    We prefer amicable, enforceable resolutions through ADR methods like mediation and arbitration. When litigation is necessary, we proceed strategically and efficiently to minimize time and costs.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                    How quickly can I expect a response to my inquiry?
+                                </button>
+                            </h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    We typically respond to all inquiries within 24-48 hours. Urgent matters are addressed on priority, and initial guidance is provided promptly.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                                    Do you provide document drafting services?
+                                </button>
+                            </h2>
+                            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes, we specialize in careful document drafting including contracts, agreements, legal notices, and compliance documentation. All documents are thoroughly reviewed for accuracy and enforceability.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Contact Us</h2>
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h5>Email</h5>
+                        <p><a href="mailto:advocateyashkumar01@gmail.com">advocateyashkumar01@gmail.com</a></p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h5>Phone</h5>
+                        <p><a href="tel:7550534867">+91 7550534867</a></p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h5>Address</h5>
+                        <p>Lyceum Law chambers<br>NEW DELHI</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-lg-12 text-center">
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="mailto:advocateyashkumar01@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 bg-dark text-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <p class="mb-0">&copy; 2025 Lyceum Law Chambers. All rights reserved.</p>
+                </div>
+                <div class="col-lg-6 text-lg-end">
+                    <p class="mb-0">Delhi-based Legal Practice | Hybrid Consultation Model</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Admin Modal -->
+    <div class="modal fade" id="adminModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Admin Panel</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Admin functionality for managing service requests and client communications.</p>
+                    <div class="alert alert-info">
+                        <i class="fas fa-info-circle me-2"></i>
+                        This is a demo admin panel. In production, this would include:
+                        <ul class="mt-2 mb-0">
+                            <li>Service request management</li>
+                            <li>Client communication tracking</li>
+                            <li>Document management</li>
+                            <li>Billing and invoicing</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="app.js"></script>
+</body>
+</html>
